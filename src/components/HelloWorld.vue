@@ -1,11 +1,36 @@
 <template>
   <div class="hello">
-   
+    <group-title class="card_title">我的音乐</group-title>
+    <grid>
+      <grid-item :label="九宫格" v-for="i in 2" :key="i">
+        <img slot="icon" src="../assets/grid_icon.png">
+      </grid-item>
+    </grid>
+    <group-title class="card_title">最近播放</group-title>
+    <grid :show-lr-borders="false" :show-vertical-dividers="false">
+      <grid-item link="/component/cell" :label="跳转到Cell">
+        <img slot="icon" src="../assets/grid_icon.png">
+      </grid-item>
+      <grid-item :link="{ path: '/component/cell'}" :label="跳转到Cell">
+        <img slot="icon" src="../assets/grid_icon.png">
+      </grid-item>
+    </grid>
+    <group-title class="card_title">歌单</group-title>
+    <grid :show-lr-borders="false">
+      <grid-item :label="九宫格" v-for="i in 14" :key="i">
+        <img slot="icon" src="../assets/grid_icon.png">
+      </grid-item>
+    </grid>
+
   </div>
 </template>
 
+
 <script>
+import {Grid, GridItem, GroupTitle} from 'vux'
+
 export default {
+  components:{Grid, GridItem, GroupTitle},
   name: "",
   data() {
     return {
@@ -21,10 +46,16 @@ export default {
    
   },
   methods: {
-    
+    onItemClick () {
+      console.log('on item click')
+    }
   }
 };
 </script>
 
 <style scoped>
+.card_title{
+  /* background-color: darkmagenta; */
+  text-align:left;
+}
 </style>

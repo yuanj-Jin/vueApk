@@ -14,11 +14,17 @@
     },
     "dependencies": {
         "element-ui": "^2.13.0",
+        "less": "^3.11.1",
+        "less-loader": "^4.1.0",
         "lib-flexible": "^0.3.2",
-        "node-sass": "^4.13.0",
-        "sass-loader": "^8.0.0",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^7.3.1",
+        "style-loader": "^1.2.1",
         "vue": "^2.5.2",
-        "vue-router": "^3.0.1"
+        "vue-router": "^3.0.1",
+        "vux": "^2.9.4",
+        "vux-loader": "^1.2.9",
+        "yaml-loader": "^0.6.0"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",
@@ -65,7 +71,7 @@
         "uglifyjs-webpack-plugin": "^1.1.1",
         "url-loader": "^0.5.8",
         "vue-jest": "^1.0.2",
-        "vue-loader": "^13.3.0",
+        "vue-loader": "^13.7.3",
         "vue-style-loader": "^3.0.1",
         "vue-template-compiler": "^2.5.2",
         "webpack": "^3.6.0",
