@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <musicSearch></musicSearch>
     <group-title class="card_title">我的音乐</group-title>
     <grid>
       <grid-item :label="九宫格" v-for="i in 2" :key="i">
@@ -21,16 +22,17 @@
         <img slot="icon" src="../assets/grid_icon.png">
       </grid-item>
     </grid>
-
   </div>
 </template>
 
 
 <script>
 import {Grid, GridItem, GroupTitle} from 'vux'
+import musicSearch from './search/MusicSearch'
 
 export default {
-  components:{Grid, GridItem, GroupTitle},
+  components:{musicSearch,
+    Grid, GridItem, GroupTitle},
   name: "",
   data() {
     return {
@@ -51,6 +53,8 @@ export default {
     }
   }
 };
+
+
 </script>
 
 <style scoped>
